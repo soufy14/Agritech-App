@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<style>
+    .image{
+        background: url(/logo/Home\ Carroussel.jpg);
+    }
+    .sidebar{
+        left: -200%;
+        transition: 0.5s ease ;
+    }
+    .sidebar:target {
+        left: 0;
+    }
+</style>
+<body class="w-screen h-screen">
+    <header>
+        <nav class="">
+            <div  class="w-full px-3.5 py-4 bg-[#F1EAD3] flex justify-between items-center max-sm:hidden">
+                <div class="flex justify-start items-center grow max-[769px]:hidden flex-wrap">
+                    <div class="flex items-center gap-1.5">
+                        <i class="text-4xl fa-regular fa-envelope"></i>
+                        <input type="email" value="support@agritech.com" class="outline-none">
+                    </div>
+                     <div class="flex justify-center items-center gap-1.5">
+                        <i class="text-4xl ri-phone-line"></i>
+                        <input type="tel" value="(00227) 99989796" class="outline-none">
+                    </div>
+                </div>
+                <div class="flex items-center grow">
+                    <img src="/logo/favico.png" alt="" class="h-12">
+                    <h2 class="font-bold text-2xl">Agritech App</h2>
+                </div>
+                <div class="flex items-center justify-end gap-4 grow">
+                    <div class="flex items-center gap-1.5">
+                        <img src="/logo/Niger.png" alt="" class="h-10">
+                        <p>NE</p>
+                    </div>
+                    <div class="text-2xl flex justify-center items-center gap-2 border-l px-2">
+                        <a href="http://x.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="http://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="http://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="http://tiktok.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white w-full px-4 py-4 flex justify-between items-center gap-x-4 max-sm:hidden shadow-sm">
+                <div class=" flex justify-start items-center border rounded-sm border-[#EDEDED] overflow-hidden grow max-[769px]:hidden">
+                    <label class="p-1.5 px-2 bg-[#F7F9F9] border-r border-[#EDEDED]" for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+                    <input type="search" id="search" placeholder="Search anything..." class="p-1.5 w-full">
+                </div>
+                <ul class="flex justify-center items-center gap-x-6 grow text-xl flex-wrap  text-[#585444]">
+                    <a href="./index.html"><li>Home <i class="text-[#A9A9A9] ri-arrow-right-up-long-line "></i></li></a>
+                    <a href="./formation.html"><li>Formations <i class="text-[#A9A9A9] ri-arrow-right-up-long-line"></i></li></a>
+                    <a href="./meteo.html"><li>Météo <i class="text-[#A9A9A9] ri-arrow-right-up-long-line"></i></li></a>
+                    <a href=""><li>Indicateus <i class="text-[#A9A9A9] ri-arrow-right-up-long-line"></i></li></a>
+                </ul>
+                <div class="flex justify-end items-center grow">
+                    <a href="./connexion.html"><button class="bg-emerald-950 px-10 py-2 cursor-pointer rounded-full text-white hover:bg-emerald-900">Connect <i class="bi bi-box-arrow-in-left px-2"></i></button></a>
+                </div>
+            </div>
+        </nav>
+        <div class="flex justify-baseline items-center py-4 px-8 sm:hidden fixed w-full z-30 shadow-xl bg-white">
+            <div class="flex items-center grow">
+                <img src="/logo/favico.png" alt="" class="h-12">
+                <h2 class="font-bold text-2xl">Agritech App</h2>
+            </div>
+            <div class="text-2xl">
+                <a href="#menu" class="border-2 border-amber-50 py-1.5 px-2.5 rounded-md cursor-pointer"><i class="fa-solid fa-bars cursor-pointer"></i></a>
+            </div>
+        </div>
+        <div class="sm:hidden h-full sidebar bg-amber-50 top-0 fixed z-30" id="menu">
+            <div class="flex items-center justify-between py-4 px-3">
+                <div class="flex items-center grow">
+                    <img src="/logo/favico.png" alt="" class="h-12">
+                    <h2 class="font-bold text-2xl">Agritech App</h2>
+                </div>
+                <a href="#" class="cursor-pointer hover:bg-amber-50"><i class="fa-solid fa-x p-1 text-xl"></i></a>
+            </div>
+            <div class="flex justify-center items-center">
+                <a href="./connexion.html"><button class="bg-emerald-950 px-10 py-2 cursor-pointer rounded-full text-white">Connect <i class="ri-arrow-left-box-line"></i></button></a>
+            </div>
+            <div class="border-b-2 border-[#EDEDED] mx-3 mt-6"></div>
+            <ul class="flex items-start gap-y-5 grow text-md flex-col p-8  text-[#585444]">
+                <a href="./index.html"><li>Home <i class="text-[#A9A9A9] ri-arrow-right-up-long-line"></i></li></a>
+                <a href="./formation.html"><li>Formations <i class="text-[#A9A9A9] ri-arrow-right-up-long-line"></i></li></a>
+                <a href="./meteo.html"><li>Météo <i class="text-[#A9A9A9] ri-arrow-right-up-long-line"></i></li></a>
+                <a href="#"><li>Indicateus <i class="text-[#A9A9A9] ri-arrow-right-up-long-line"></i></li></a>
+            </ul>
+            <div class="border-b-2 border-[#EDEDED] mx-3 mt-6"></div>
+            <div class="flex items-center flex-col-reverse gap-y-5 p-8">
+                 <div class="flex justify-center items-center flex-col gap-y-3.5">
+                    <div class="flex items-center justify-center gap-1.5">
+                        <i class="text-3xl fa-regular fa-envelope"></i>
+                        <input type="email" value="support@agritech.com" class="outline-none font-bold">
+                    </div>
+                    <div class="flex justify-center items-center gap-1.5">
+                        <i class="text-3xl ri-phone-line"></i>
+                        <input type="tel" value="(00227) 99989796" class="outline-none font-bold">
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <div class="flex items-center gap-1.5">
+                        <img src="/logo/Niger.png" alt="" class="h-8">
+                        <p>NE</p>
+                    </div>
+                    <div class="text-2xl flex justify-center items-center gap-2 border-l px-2.5">
+                        <a href="http://x.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="http://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="http://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="http://tiktok.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <h3 class="flex justify-center items-center font-bold">Socials Links:</h3>
+            </div>
+        </div>
+    </header>
+    <main class="flex justify-center items-center flex-col">
+        <div class=" w-screen h-[300px] md:h-[400px]  flex justify-center items-center xl:px-48 md:px-10 px-2 py-10 relative">
+           <img src="./logo/Home Carroussel.jpg" alt="" class="brightness-125 w-full h-full object-cover rounded-2xl overflow-hidden">
+           <div class="absolute top-32 text-center ">
+                <p class="text-xl text-amber-50 mb-6">Home >> Nos formations</p>
+                <h2 class="text-3xl text-amber-50 font-bold">Nos Formations</h2>
+           </div>
+        </div>
+         <div class="mt-10">
+            <h2 class="text-3xl font-bold lg:text-4xl text-emerald-900 py-5 px-2 md:px-10 xl:px-48 md:gap-x-8 p-2">Toute Nos Formations</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:px-10 xl:px-48 md:gap-x-8 px-2 py-8 gap-5 ">
+                <div class="container rounded-md overflow-hidden hover:scale-[1.03] transition-transform duration-800 opacity-90 hover:opacity-100">
+                    <div class="h-[326px] flex justify-center items-center relative">
+                        <img src="/images/Blog-img-1.jpg" alt="" class="h-full w-full ">
+                         <div class="w-24 h-24 rounded-full bg-amber-200 absolute bottom-[-45px] left-4 flex justify-center items-center shadow-2xl">
+                            <div class="flex flex-col items-center">
+                                <span class="text-gray-500 text-2xl">10</span>
+                                <p class="text-gray-500 text-md">08/2025</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col items-center mt-2">
+                        <p class="text-emerald-400 font-semibold mb-4">Jardinnage</p>
+                        <h3 class="text-2xl font-semibold mb-3.5">Lorem dolor</h3>
+                        <h2 class="text-gray-500 text-md mb-4">Malika Malikatou</h2>
+                        <p class="text-emerald-900 font-semibold mb-8 text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae unde natus, culpa eius aliquam adipi...</p>
+                        <p class="text-gray-500"><i class="bi bi-chat-right-dots"></i> 7 comments</p>
+                        <a href="./detail.html"><button class="bg-emerald-950 py-3 px-10 mt-2.5 rounded-4xl text-white hover:bg-emerald-900 cursor-pointer">Vois plus <i class="bi bi-box-arrow-in-up-right"></i></button></a>
+                    </div>
+                </div>
+                 <div class="container rounded-md overflow-hidden hover:scale-[1.03] transition-transform duration-800 opacity-90 hover:opacity-100">
+                    <div class="h-[326px] flex justify-center items-center relative">
+                        <img src="/images/Blog-img-9.jpg" alt="" class="h-full w-full">
+                         <div class="w-24 h-24 rounded-full bg-amber-200 absolute bottom-[-45px] left-4 flex justify-center items-center shadow-2xl">
+                            <div class="flex flex-col items-center">
+                                <span class="text-gray-500 text-2xl">29</span>
+                                <p class="text-gray-500 text-md">09/2019</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col items-center mt-2">
+                        <p class="text-emerald-400 font-semibold mb-4">Contre-Saison</p>
+                        <h3 class="text-2xl font-semibold mb-3.5">Cras dapibus</h3>
+                        <h2 class="text-gray-500 text-md mb-4">Amir Amirou</h2>
+                        <p class="text-emerald-900 font-semibold mb-8 text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae unde natus, culpa eius aliquam adipi...</p>
+                        <p class="text-gray-500"><i class="bi bi-chat-right-dots"></i> 7 comments</p>
+                        <a href="./detail.html"><button class="bg-emerald-950 py-3 px-10 mt-2.5 rounded-4xl text-white hover:bg-emerald-900 cursor-pointer">Vois plus <i class="bi bi-box-arrow-in-up-right"></i></button></a>
+                    </div>
+                </div>
+                <div class="container rounded-md overflow-hidden hover:scale-[1.03] transition-transform duration-800 opacity-90 hover:opacity-100">
+                    <div class="h-[326px] flex justify-center items-center relative">
+                        <img src="/images/Blog-img-4.jpg" alt="" class="h-full w-full">
+                         <div class="w-24 h-24 rounded-full bg-amber-200 absolute bottom-[-45px] left-4 flex justify-center items-center shadow-2xl">
+                            <div class="flex flex-col items-center">
+                                <span class="text-gray-500 text-2xl">26</span>
+                                <p class="text-gray-500 text-md">07/2019</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col items-center mt-2">
+                        <p class="text-emerald-400 font-semibold mb-4">Contre-Saison</p>
+                        <h3 class="text-2xl font-semibold mb-3.5">Lorem ipsum</h3>
+                        <h2 class="text-gray-500 text-md mb-4">Abdou Abdourahmane</h2>
+                        <p class="text-emerald-900 font-semibold mb-8 text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae unde natus, culpa eius aliquam adipi...</p>
+                        <p class="text-gray-500"><i class="bi bi-chat-right-dots"></i> 7 comments</p>
+                        <a href="./detail.html"><button class="bg-emerald-950 py-3 px-10 mt-2.5 rounded-4xl text-white hover:bg-emerald-900 cursor-pointer">Vois plus <i class="bi bi-box-arrow-in-up-right"></i></button></a>
+                    </div>
+                </div>
+                <div class="container rounded-md overflow-hidden hover:scale-[1.03] transition-transform duration-800 opacity-90 hover:opacity-100">
+                    <div class="h-[326px] flex justify-center items-center relative">
+                        <img src="/images/Blog-img-10.jpg" alt="" class="h-full w-full ">
+                         <div class="w-24 h-24 rounded-full bg-amber-200 absolute bottom-[-45px] left-4 flex justify-center items-center shadow-2xl">
+                            <div class="flex flex-col items-center">
+                                <span class="text-gray-500 text-2xl">29</span>
+                                <p class="text-gray-500 text-md">08/2015</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col items-center mt-2">
+                        <p class="text-emerald-400 font-semibold mb-4">Contre-Saison</p>
+                        <h3 class="text-2xl font-semibold mb-3.5">Lorem ipsum</h3>
+                        <h2 class="text-gray-500 text-md mb-4">Abdou Abdourahmane</h2>
+                        <p class="text-emerald-900 font-semibold mb-8 text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae unde natus, culpa eius aliquam adipi...</p>
+                        <p class="text-gray-500"><i class="bi bi-chat-right-dots"></i> 7 comments</p>
+                        <a href="./detail.html"><button class="bg-emerald-950 py-3 px-10 mt-2.5 rounded-4xl text-white hover:bg-emerald-900 cursor-pointer">Vois plus <i class="bi bi-box-arrow-in-up-right"></i></button></a>
+                    </div>
+                </div>
+                <div class="container rounded-md overflow-hidden hover:scale-[1.03] transition-transform duration-800 opacity-90 hover:opacity-100">
+                    <div class="h-[326px] flex justify-center items-center relative">
+                        <img src="/images/Blog-img-2.jpg" alt="" class="h-full w-full ">
+                         <div class="w-24 h-24 rounded-full bg-amber-200 absolute bottom-[-45px] left-4 flex justify-center items-center shadow-2xl">
+                            <div class="flex flex-col items-center">
+                                <span class="text-gray-500 text-2xl">02</span>
+                                <p class="text-gray-500 text-md">07/2015</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col items-center mt-2">
+                        <p class="text-emerald-400 font-semibold mb-4">Contre-Saison</p>
+                        <h3 class="text-2xl font-semibold mb-3.5">Lorem ipsum</h3>
+                        <h2 class="text-gray-500 text-md mb-4">Abdou Abdourahmane</h2>
+                        <p class="text-emerald-900 font-semibold mb-8 text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae unde natus, culpa eius aliquam adipi...</p>
+                        <p class="text-gray-500"><i class="bi bi-chat-right-dots"></i> 7 comments</p>
+                        <a href="./detail.html"><button class="bg-emerald-950 py-3 px-10 mt-2.5 rounded-4xl text-white hover:bg-emerald-900 cursor-pointer">Vois plus <i class="bi bi-box-arrow-in-up-right"></i></button></a>
+                    </div>
+                </div>
+                <div class="container rounded-md overflow-hidden hover:scale-[1.03] transition-transform duration-800 opacity-90 hover:opacity-100">
+                    <div class="h-[326px] flex justify-center items-center relative">
+                        <img src="/images/Blog-img-3.jpg" alt="" class="h-full w-full ">
+                         <div class="w-24 h-24 rounded-full bg-amber-200 absolute bottom-[-45px] left-4 flex justify-center items-center shadow-2xl">
+                            <div class="flex flex-col items-center">
+                                <span class="text-gray-500 text-2xl">19</span>
+                                <p class="text-gray-500 text-md">02/2015</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col items-center mt-2">
+                        <p class="text-emerald-400 font-semibold mb-4">Contre-Saison</p>
+                        <h3 class="text-2xl font-semibold mb-3.5">Lorem ipsum</h3>
+                        <h2 class="text-gray-500 text-md mb-4">Abdou Abdourahmane</h2>
+                        <p class="text-emerald-900 font-semibold mb-8 text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae unde natus, culpa eius aliquam adipi...</p>
+                        <p class="text-gray-500"><i class="bi bi-chat-right-dots"></i> 7 comments</p>
+                        <a href="./detail.html"><button class="bg-emerald-950 py-3 px-10 mt-2.5 rounded-4xl text-white hover:bg-emerald-900 cursor-pointer">Vois plus <i class="bi bi-box-arrow-in-up-right"></i></button></a>
+                    </div>
+                </div>
+                <div class="container rounded-md overflow-hidden hover:scale-[1.03] transition-transform duration-800 opacity-90 hover:opacity-100">
+                    <div class="h-[326px] flex justify-center items-center relative">
+                        <img src="/images/Blog-img-7.jpg" alt="" class="h-full w-full ">
+                         <div class="w-24 h-24 rounded-full bg-amber-200 absolute bottom-[-45px] left-4 flex justify-center items-center shadow-2xl">
+                            <div class="flex flex-col items-center">
+                                <span class="text-gray-500 text-2xl">16</span>
+                                <p class="text-gray-500 text-md">09/2014</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col items-center mt-2">
+                        <p class="text-emerald-400 font-semibold mb-4">Contre-Saison</p>
+                        <h3 class="text-2xl font-semibold mb-3.5">Lorem ipsum</h3>
+                        <h2 class="text-gray-500 text-md mb-4">Abdou Abdourahmane</h2>
+                        <p class="text-emerald-900 font-semibold mb-8 text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae unde natus, culpa eius aliquam adipi...</p>
+                        <p class="text-gray-500"><i class="bi bi-chat-right-dots"></i> 7 comments</p>
+                        <a href="./detail.html"><button class="bg-emerald-950 py-3 px-10 mt-2.5 rounded-4xl text-white hover:bg-emerald-900 cursor-pointer">Vois plus <i class="bi bi-box-arrow-in-up-right"></i></button></a>
+                    </div>
+                </div>
+                <div class="container rounded-md overflow-hidden hover:scale-[1.03] transition-transform duration-800 opacity-90 hover:opacity-100">
+                    <div class="h-[326px] flex justify-center items-center relative">
+                        <img src="/images/Blog-img-8.jpg" alt="" class="h-full w-full ">
+                         <div class="w-24 h-24 rounded-full bg-amber-200 absolute bottom-[-45px] left-4 flex justify-center items-center shadow-2xl">
+                            <div class="flex flex-col items-center">
+                                <span class="text-gray-500 text-2xl">21</span>
+                                <p class="text-gray-500 text-md">01/2014</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col items-center mt-2">
+                        <p class="text-emerald-400 font-semibold mb-4">Contre-Saison</p>
+                        <h3 class="text-2xl font-semibold mb-3.5">Lorem ipsum</h3>
+                        <h2 class="text-gray-500 text-md mb-4">Abdou Abdourahmane</h2>
+                        <p class="text-emerald-900 font-semibold mb-8 text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae unde natus, culpa eius aliquam adipi...</p>
+                        <p class="text-gray-500"><i class="bi bi-chat-right-dots"></i> 7 comments</p>
+                        <a href="./detail.html"><button class="bg-emerald-950 py-3 px-10 mt-2.5 rounded-4xl text-white hover:bg-emerald-900 cursor-pointer">Vois plus <i class="bi bi-box-arrow-in-up-right"></i></button></a>
+                    </div>
+                </div>
+                <div class="container rounded-md overflow-hidden hover:scale-[1.03] transition-transform duration-800 opacity-90 hover:opacity-100">
+                    <div class="h-[326px] flex justify-center items-center relative">
+                        <img src="/images/Blog-img-6.jpg" alt="" class="h-full w-full ">
+                         <div class="w-24 h-24 rounded-full bg-amber-200 absolute bottom-[-45px] left-4 flex justify-center items-center shadow-2xl">
+                            <div class="flex flex-col items-center">
+                                <span class="text-gray-500 text-2xl">12</span>
+                                <p class="text-gray-500 text-md">03/2012</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col items-center mt-2">
+                        <p class="text-emerald-400 font-semibold mb-4">Contre-Saison</p>
+                        <h3 class="text-2xl font-semibold mb-3.5">Lorem ipsum</h3>
+                        <h2 class="text-gray-500 text-md mb-4">Abdou Abdourahmane</h2>
+                        <p class="text-emerald-900 font-semibold mb-8 text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae unde natus, culpa eius aliquam adipi...</p>
+                        <p class="text-gray-500"><i class="bi bi-chat-right-dots"></i> 7 comments</p>
+                        <a href="./detail.html"><button class="bg-emerald-950 py-3 px-10 mt-2.5 rounded-4xl text-white hover:bg-emerald-900 cursor-pointer">Vois plus <i class="bi bi-box-arrow-in-up-right"></i></button></a>
+                    </div>
+                </div>
+                <div class="container rounded-md overflow-hidden hover:scale-[1.03] transition-transform duration-800 opacity-90 hover:opacity-100">
+                    <div class="h-[326px] flex justify-center items-center relative">
+                        <img src="/images/Blog-img-5.jpg" alt="" class="h-full w-full ">
+                        <div class="w-24 h-24 rounded-full bg-amber-200 absolute bottom-[-45px] left-4 flex justify-center items-center shadow-2xl">
+                            <div class="flex flex-col items-center">
+                                <span class="text-gray-500 text-2xl">25</span>
+                                <p class="text-gray-500 text-md">03/2010</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col items-center mt-2">
+                        <p class="text-emerald-400 font-semibold mb-4">Contre-Saison</p>
+                        <h3 class="text-2xl font-semibold mb-3.5">Ultricies nec</h3>
+                        <h2 class="text-gray-500 text-md mb-4">Abdou Abdourahmane</h2>
+                        <p class="text-emerald-900 font-semibold mb-8 text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae unde natus, culpa eius aliquam adipi...</p>
+                        <p class="text-gray-500"><i class="bi bi-chat-right-dots"></i> 7 comments</p>
+                        <a href="./detail.html"><button class="bg-emerald-950 py-3 px-10 mt-2.5 rounded-4xl text-white hover:bg-emerald-900 cursor-pointer">Vois plus <i class="bi bi-box-arrow-in-up-right"></i></button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+    <footer class=" w-full h-auto shadow-2xl">
+        <div class="p-3 h-auto">
+        <div class="flex justify-end items-center gap-x-14 mb-6">
+            <h3 class="text-2xl font-bold">Join Our Nexsletter</h3>
+            <div class="flex items-center w-md relative">
+            <input type="search" placeholder="Enter your Email" class=" w-full p-1.5 rounded-sm border border-[#EDEDED]">
+            <button class="absolute right-0 bg-emerald-950 text-white px-6 py-1.5 rounded-2xl hover:bg-emerald-900 cursor-pointer">S'abonner</button>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div class="flex flex-col justify-center">
+                <div class="flex items-center mb-2.5">
+                    <img src="/logo/favico.png" alt="" class="h-12">
+                    <h2 class="font-bold text-2xl">Agritech App</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque ipsum accusamus accusantium totam distinctio, quis quaerat consectetur?</p>
+                <h3 class="font-bold my-3 text-md">Suivrez nous sur:</h3>
+                 <div class="text-2xl flex justify-start items-center gap-2 p-4">
+                    <a href="http://x.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="http://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="http://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="http://tiktok.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center p-3 gap-1.5">
+                <h3 class="font-bold text-xl mb-2.5">Liens Utiles</h3>
+                <ul class="flex items-start grow text-md flex-col font-bold  text-[#585444]">
+                    <a href=""><li> <span class="text-[#A9A9A9]">>></span> Home </li></a>
+                    <a href=""><li><span class="text-[#A9A9A9]">>></span> Formations </li></a>
+                    <a href=""><li><span class="text-[#A9A9A9]">>></span> Météo </i></li></a>
+                    <a href=""><li><span class="text-[#A9A9A9]">>></span> Indicateus </li></a>
+                </ul>
+            </div>
+             <div class="flex flex-col justify-center p-3 gap-1.5">
+                <h3 class="font-bold text-xl mb-2.5">Nos Services</h3>
+                <ul class="flex items-start grow text-md flex-col font-bold  text-[#585444]">
+                    <a href=""><li><span class="text-[#A9A9A9]">>></span> Home </li></a>
+                    <a href=""><li><span class="text-[#A9A9A9]">>></span> Formations </li></a>
+                    <a href=""><li><span class="text-[#A9A9A9]">>></span> Météo </i></li></a>
+                    <a href=""><li><span class="text-[#A9A9A9]">>></span> Indicateus </li></a>
+                </ul>
+            </div>
+            <div class="flex flex-col justify-start p-3 gap-1.5">
+                <h3 class="font-bold text-xl mb-2.5">Contactez Nous</h3>
+                <div class="flex items-center gap-x-2">
+                    <i class="text-4xl ri-phone-line"></i>
+                    <div class="flex flex-col">
+                        <label class="text-[#BFBFBD]" for="phone">Phone:</label>
+                        <input type="tel" value="(00227) 99 98 97 96" name="phone" class="outline-none">
+                    </div>
+                </div>
+                 <div class="flex items-center gap-x-2">
+                    <i class="text-4xl fa-solid fa-location-crosshairs"></i>
+                    <div class="flex flex-col">
+                        <label class="text-[#BFBFBD]" for="text">Location:</label>
+                        <input type="text" value="Niamey, Niger" name="text" class="outline-none">
+                    </div>
+                </div>
+                 <div class="flex items-center gap-x-2">
+                    <i class="text-4xl fa-regular fa-envelope"></i>
+                    <div class="flex flex-col">
+                        <label class="text-[#BFBFBD]" for="email">E-mail:</label>
+                        <input type="email" value="support@agritech.com" id="email" class="outline-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="w-full bg-emerald-950 p-12 hover:bg-emerald-900">
+            <div class="text-xl text-white">
+                <p>&copy; 2025 Codeloccol, All Rights Reserved .</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
