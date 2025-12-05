@@ -56,7 +56,7 @@
             <div class="bg-white w-full px-4 py-4 flex justify-between items-center gap-x-4 max-sm:hidden shadow-sm">
                 <div class=" flex justify-start items-center border rounded-sm border-[#EDEDED] overflow-hidden grow max-[769px]:hidden">
                     <label class="p-1.5 px-2 bg-[#F7F9F9] border-r border-[#EDEDED]" for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
-                    <input type="search" id="search" placeholder="Search anything..." class="p-1.5 w-full">
+                    <input type="search" id="search" placeholder="Search anything..." class="p-1.5 w-full active:outline outline-emerald-900">
                 </div>
                 <ul class="flex justify-center items-center gap-x-6 grow text-xl flex-wrap  text-[#585444]">
                     <a href="./index.html"><li class="flex items-center gap-1 group">Home <i class="text-[#A9A9A9] ri-arrow-right-up-long-line transition-all duration-300 group-hover:translate-x-1"></i></li></a>
@@ -81,7 +81,7 @@
         <div class="sm:hidden h-full sidebar bg-amber-50 top-0 fixed z-30" id="menu">
             <div class="flex items-center justify-between py-4 px-3">
                 <div class="flex items-center grow">
-                    <img src="/logo/favico.png" alt="" class="h-12">
+                    <img src="./logo/favico.png" alt="" class="h-12">
                     <h2 class="font-bold text-2xl">Agritech App</h2>
                 </div>
                 <a href="#" class="cursor-pointer hover:bg-amber-50"><i class="fa-solid fa-x p-1 text-xl"></i></a>
@@ -125,7 +125,7 @@
             </div>
         </div>
     </header>
-    <main class="flex justify-center items-center flex-col pb-12">
+    <main class="flex justify-center items-center flex-col pb-12 max-sm:pt-20">
         <div class=" w-screen h-[300px] md:h-[400px]  flex justify-center items-center xl:px-48 md:px-10 px-2 py-10 relative">
            <img src="./logo/Home Carroussel.jpg" alt="" class="brightness-125 w-full h-full object-cover rounded-2xl overflow-hidden">
            <div class="absolute top-32 text-center ">
@@ -249,19 +249,12 @@
             </div>
         </div>
     </main>
-
-
-
-
-
-
-
     <footer class=" w-full h-auto shadow-2xl">
         <div class="p-3 h-auto">
-        <div class="flex justify-end items-center gap-x-14 mb-6">
-            <h3 class="text-2xl font-bold">Join Our Nexsletter</h3>
+        <div class="flex justify-end items-center gap-x-14 mb-6 max-sm:gap-x-1">
+            <h3 class="text-2xl font-bold w-[700px]">Join Our Nexsletter</h3>
             <div class="flex items-center w-md relative">
-            <input type="search" placeholder="Enter your Email" class=" w-full p-1.5 rounded-sm border border-[#EDEDED]">
+            <input type="search" placeholder="Enter your Email" class=" w-full p-1.5 rounded-sm border border-[#EDEDED] active:outline outline-emerald-900">
             <button class="absolute right-0 bg-emerald-950 text-white px-6 py-1.5 rounded-2xl hover:bg-emerald-900 cursor-pointer">S'abonner</button>
             </div>
         </div>
